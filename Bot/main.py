@@ -105,7 +105,7 @@ async def user(ctx, member: discord.Member):
                           color=0x00FF00)
     embed.set_thumbnail(url=member.avatar)
     embed.add_field(name="Имя:",
-                    value=member.name,
+                    value=f'{member.name}#{member.discriminator}',
                     inline=False)
     embed.add_field(name="Присоединился:",
                     value=joined,
