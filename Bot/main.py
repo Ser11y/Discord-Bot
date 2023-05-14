@@ -74,7 +74,7 @@ async def clear(ctx, amount: int):
                          description=f'Было удалено {amount} сообщений.',
                          color=0x00FF00)
     await ctx.send(embed=emb1)
-    asyncio.sleep(3)
+    await asyncio.sleep(3)
     await ctx.channel.purge(limit=50, check=is_me)
 
 
